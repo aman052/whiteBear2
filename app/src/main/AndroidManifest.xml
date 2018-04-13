@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddCustomer"></activity>
+        <activity android:name=".FeedbackActivity"></activity>
     </application>
 
 </manifest>
