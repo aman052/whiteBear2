@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,15 +10,13 @@
     app:cardElevation="10dp"
     >
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:animateLayoutChanges="true"
         android:layout_marginTop="10dp"
-        >
+        android:orientation="vertical">
         <LinearLayout
-            android:id="@+id/customer_hidden_button"
+            android:id="@+id/event_hidden_button"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:orientation="horizontal"
@@ -29,85 +26,98 @@
                 android:layout_gravity="center"
                 android:layout_width="100dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_people_black_24dp"
-                />
+                android:src="@drawable/ic_people_black_24dp" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 >
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_margin="10dp"
-                    >
+                    android:layout_margin="7dp">
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Client UID:"
-                        android:textStyle="bold"
-                        />
-                    <TextView
-                        android:id="@+id/customer_cus_id"
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_margin="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Client Name:"
-                        android:textStyle="bold"
-                        />
-                    <TextView
-                        android:id="@+id/customer_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_margin="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                        android:text="Client UID"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"/>
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Client Phone:"
-                        />
+                        android:layout_height="wrap_content"
+                        android:id="@+id/customer_UID"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="7dp">
                     <TextView
-                        android:id="@+id/customer_phone"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_weight="1"
-                        />
-
+                        android:layout_height="wrap_content"
+                        android:text="Client name"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/customer_name"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="7dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Event ID"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/event_id"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="7dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Event Type"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/event_type"/>
                 </LinearLayout>
 
             </LinearLayout>
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/customer_hide_view"
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:src="@drawable/ic_expand_more_black_24dp"
+            android:id="@+id/expansion"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/event_hidden_view"
             android:orientation="vertical"
-            android:visibility="gone"
-            >
-
+            android:visibility="gone">
             <LinearLayout
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
@@ -118,10 +128,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textStyle="bold"
-                    android:text="Client Address:"
+                    android:text="Event Venue:"
                     />
                 <TextView
-                    android:id="@+id/customer_address"
+                    android:id="@+id/event_venue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.25"
@@ -139,10 +149,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textStyle="bold"
-                    android:text="Client Email Id:"
+                    android:text="Number of Guests:"
                     />
                 <TextView
-                    android:id="@+id/customer_email_id"
+                    android:id="@+id/guest_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.25"
@@ -159,11 +169,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="ClientId:"
+                    android:text="Cuisine Type:"
                     android:textStyle="bold"
                     />
                 <TextView
-                    android:id="@+id/customer_event_id"
+                    android:id="@+id/cuisine_type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.25"
@@ -171,7 +181,6 @@
 
             </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
 
 </android.support.v7.widget.CardView>

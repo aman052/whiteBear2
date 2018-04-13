@@ -7,29 +7,31 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.whitebear.MainActivity">
 
-    <include layout="@layout/app_bar" android:id="@+id/app_bar" />
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
 
     <FrameLayout
         android:id="@+id/main_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/app_bar"
         android:layout_above="@+id/main_bottomnav"
-        >
+        android:layout_below="@id/app_bar"
+        android:background="@color/mainBackground">
 
     </FrameLayout>
 
-<android.support.design.widget.BottomNavigationView
-    android:id="@+id/main_bottomnav"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    app:menu="@menu/bottom_nav_menu"
-    >
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/main_bottomnav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:animateLayoutChanges="true"
+        android:background="@color/bottomNav"
+        app:menu="@menu/bottom_nav_menu">
 
 
-</android.support.design.widget.BottomNavigationView>
-
+    </android.support.design.widget.BottomNavigationView>
 
 
 </RelativeLayout>
