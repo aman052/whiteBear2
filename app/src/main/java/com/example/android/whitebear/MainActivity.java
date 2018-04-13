@@ -2,17 +2,14 @@ package com.example.android.whitebear;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.support.annotation.NonNull;
-import android.support.design.internal.BottomNavigationItemView;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.AdapterView;
 import android.widget.FrameLayout;
-import android.widget.Toolbar;
 
+import com.example.android.whitebear.fragment.fragment0;
 import com.example.android.whitebear.fragment.fragment1;
 import com.example.android.whitebear.fragment.fragment3;
 import com.example.android.whitebear.fragment.fragment4;
@@ -38,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         manager=getFragmentManager();
         android.app.FragmentTransaction transaction=manager.beginTransaction();
-        transaction.add(R.id.main_frame,new fragment1());
+        transaction.add(R.id.main_frame,new fragment0());
         transaction.commit();
 
 
@@ -48,8 +45,11 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView.OnNavigationItemSelectedListener mItemSelected=new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            if (item.getItemId()==R.id.bottom_home){
+                replace(new fragment0());
+            }
 
-            if(item.getItemId()==R.id.bottom_cust)
+           else if(item.getItemId()==R.id.bottom_cust)
             {
                 replace(new fragment1());
             }
@@ -66,9 +66,11 @@ public class MainActivity extends AppCompatActivity {
                 replace(new fragment4());
             }
 
+
             return true;
         }
     };
+
 
     private void replace(Fragment f)
     {
